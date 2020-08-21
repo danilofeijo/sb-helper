@@ -28,9 +28,7 @@
   "files.autoSave": "onWindowChange",
   "files.exclude": {
     "**/node_modules": false,
-    "**/.git": false,
-    "**/.svn": true,
-    "**/.hg": true,
+    "**/.git": false
   },
   "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
   "terminal.integrated.fontSize": 12,
@@ -41,8 +39,6 @@
   "workbench.colorTheme": "Dracula",
   "workbench.iconTheme": "simple-icons",
   "workbench.colorCustomizations": {
-    "activityBar.background": "#343439",
-    "activityBar.foreground": "#FFFFFF",
     "activityBarBadge.background": "#FF0000"
   },
   // Extensions Settings
@@ -61,14 +57,15 @@
     "suppressNoRepositoryWarning": false,
     "suppressResultsExplorerNotice": false,
     "gitlens.keymap": "none",
-    "suppressShowKeyBindingsNotice": true
+                            "suppressShowKeyBindingsNotice": true
   },
   "indentRainbow.colors": [
     "rgba(16,16,16,0.1)",
     "rgba(16,16,16,0.3)",
     "rgba(16,16,16,0.6)",
-    "rgba(16,16,16,0.4)",
-    "rgba(16,16,16,0.2)"
+    "rgba(16,16,16,1.9)",
+    "rgba(16,16,16,0.6)",
+    "rgba(16,16,16,0.3)"
   ],
   "liveshare.featureSet": "insiders",
   "git.autofetch": true,
