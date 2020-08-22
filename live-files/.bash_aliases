@@ -45,30 +45,48 @@ mkcd () {
   cd -- "$1"
 }
 
+upterm () {
+  source ~/.bashrc
+  clear
+  echo
+  echo 'Terminal Updated!'
+  echo
+}
+
+sbzsh () {
+  sudo apt install zsh -y
+  # change the default shell of the user to zsh
+  # sudo chsh -s /usr/bin/zsh danilofs
+  # exit
+  # Check current shell used
+  # sudo -i
+  # echo $SHELL
+}
+
+sbohmy () {
+  # install Oh-my-zsh (not as root user)
+  wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh
+  # Copy the template .zshrc.zsh-template configuration file to the home directory .zshrc
+  cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
+  # Apply settings previously set
+  source ~/.zshrc
+}
+
 cdls () {
   cd $1 && ls
 }
 
 # Personal
-alias zzz='_open_zsh'  # Only if you have Zsh
+alias zzz='clear && zsh'  # Only if you have Zsh
 alias zz='exit'
 
 # Project
 
 # Examples
-alias gotoproject='cd ~/folder00/folder01/folder02/folder03/project_folder/'
-alias runsomething='cd ~/folder00/folder01/folder02/folder03/project_folder/ && ./bashFile.sh'
+alias gotoproject='cd ~/folder00/project_folder/'
+alias runsomething='cd ~/folder00/project_folder/ && ./bashFile.sh'
 
 # <add new alias below>
-
-#-----------------------------------------------------#
-#         Functions - Personal                        #
-#-----------------------------------------------------#
-
-_open_zsh() {
-  clear
-  zsh
-}
 
 #-----------------------------------------------------#
 #         Functions - Basics                          #
