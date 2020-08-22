@@ -1,0 +1,19 @@
+[global_config]
+  enabled_plugins = TestPlugin, LaunchpadCodeURLHandler, APTURLHandler, LaunchpadBugURLHandler
+[keybindings]
+[layouts]
+  [[default]]
+    [[[child1]]]
+      command = zsh; bash
+      parent = window0
+      profile = Profile1
+      type = Terminal
+    [[[window0]]]
+      parent = ""
+      type = Window
+[plugins]
+[profiles]
+  [[default]]
+    cursor_color = "#aaaaaa"
+  [[Profile1]]
+    cursor_color = "#aaaaaa"
