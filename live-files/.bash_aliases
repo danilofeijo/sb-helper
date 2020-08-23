@@ -46,8 +46,7 @@ mkcd () {
 }
 
 upterm () {
-  source ~/.bashrc
-  clear
+  source ~/.zshrc
   echo
   echo 'Terminal Updated!'
   echo
@@ -70,6 +69,13 @@ sbohmy () {
   cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
   # Apply settings previously set
   source ~/.zshrc
+}
+
+zsh-better-npm-completion () {
+  # Run after ZSH + Oh My Zsh Install
+  git clone https://github.com/lukechilds/zsh-better-npm-completion ~/.oh-my-zsh/custom/plugins/zsh-better-npm-completion
+  # Reference
+  # https://github.com/lukechilds/zsh-better-npm-completion
 }
 
 cdls () {
