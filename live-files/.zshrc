@@ -90,6 +90,7 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 source $HOME/.bash_aliases
+source $HOME/.bash_functions
 
 # User configuration
 
