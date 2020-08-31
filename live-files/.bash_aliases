@@ -33,24 +33,37 @@ alias sbsetup_essentials='_setup_essentials'
 alias sbsetup_regular='_setup_regular'
 alias sbsetup_all='_setup_all'
 
-sbdisable_touchscreen () {
-  sudo xinput set-prop 'ELAN Touchscreen' 'Device Enabled' 0
-  # Reference
-  # http://www.cleuber.com.br/index.php/2016/03/14/como-desabilitar-tela-de-touch-screen-no-linux
-}
+# Personal
+alias zzz='clear && zsh'  # Only if you have Zsh
+alias zz='exit'
 
-mkcd () {
-  mkdir -p -- "$1"
-  chmod -R +777 -- "$1"
-  cd -- "$1"
-}
+# Project
 
-upterm () {
-  source ~/.zshrc
-  echo
-  echo 'Terminal Updated!'
-  echo
-}
+# Examples
+alias gotoproject='cd ~/folder00/project_folder/'
+alias runsomething='cd ~/folder00/project_folder/ && ./bashFile.sh'
+
+# <add new alias below>
+
+
+# sbdisable_touchscreen () {
+#   sudo xinput set-prop 'ELAN Touchscreen' 'Device Enabled' 0
+#   # Reference
+#   # http://www.cleuber.com.br/index.php/2016/03/14/como-desabilitar-tela-de-touch-screen-no-linux
+# }
+
+# mkcd () {
+#   mkdir -p -- "$1"
+#   chmod -R +777 -- "$1"
+#   cd -- "$1"
+# }
+
+# upterm () {
+#   source ~/.zshrc
+#   echo
+#   echo 'Terminal Updated!'
+#   echo
+# }
 
 sbzsh () {
   sudo apt install zsh -y
@@ -78,38 +91,27 @@ zsh-better-npm-completion () {
   # https://github.com/lukechilds/zsh-better-npm-completion
 }
 
-cdls () {
-  cd $1 && ls
-}
+# cdls () {
+#   cd $1 && ls
+# }
 
-# Personal
-alias zzz='clear && zsh'  # Only if you have Zsh
-alias zz='exit'
-
-# Project
-
-# Examples
-alias gotoproject='cd ~/folder00/project_folder/'
-alias runsomething='cd ~/folder00/project_folder/ && ./bashFile.sh'
-
-# <add new alias below>
 
 #-----------------------------------------------------#
 #         Functions - Basics                          #
 #-----------------------------------------------------#
 
-_status() {
-  echo
-  echo "Super Bash Helper is ready to save your time!"
-  echo
-}
+# _status() {
+#   echo
+#   echo "Super Bash Helper is ready to save your time!"
+#   echo
+# }
 
-_create_default_folders() {
-  sudo mkdir ~/studyspace   # A place for your studing projects
-  sudo mkdir ~/workspace    # A place for your professional projects
-  sudo chmod -R +777 studyspace
-  sudo chmod -R +777 workspace
-}
+# _create_default_folders() {
+#   sudo mkdir ~/labspace   # A place for your studing projects
+#   sudo mkdir ~/workspace    # A place for your professional projects
+#   sudo chmod -R +777 studyspace
+#   sudo chmod -R +777 workspace
+# }
 
 _setup_essentials() {
   # Essential Packages
