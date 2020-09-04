@@ -47,6 +47,25 @@ function disabletouch () {
   # http://www.cleuber.com.br/index.php/2016/03/14/como-desabilitar-tela-de-touch-screen-no-linux
 }
 
+function bitbucketsshkeygen () {
+  echo
+  echo '>>  Generate new Bitbucket SSH Key  <<'
+  echo
+  ssh-keygen
+  echo
+  echo 'Check the keys generated ~/.ssh/'
+  ls ~/.ssh
+  eval `ssh-agent`
+  ssh-add ~/.ssh/id_rsa
+  echo
+  cat ~/.ssh/id_rsa.pub
+  echo
+  echo '- Select and copy the key output in the clipboard'
+  echo '- Paste copied content "Personal settings >> SSH keys >> Add key >> Key (field)"'
+  echo
+  # Reference
+  # https://support.atlassian.com/bitbucket-cloud/docs/set-up-an-ssh-key/#SetupanSSHkey-ssh2
+}
 
 #-----------------------------------------------------#
 #         Install and Setup                           #
