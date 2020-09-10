@@ -11,6 +11,20 @@
 #         Custom Commands                             #
 #-----------------------------------------------------#
 
+function setDefaultHardLinks() {
+  echo
+  echo '>>  SB --> Creating default hard links for config files  <<'
+  echo
+  ln -f ~/labspace/sb-helper/live-files/.bash_aliases ~/.bash_aliases
+  ln -f ~/labspace/sb-helper/live-files/.bash_functions ~/.bash_functions
+  ln -f ~/labspace/sb-helper/live-files/.bashrc ~/.bashrc
+  ln -f ~/labspace/sb-helper/live-files/.zshrc ~/.zshrc
+  ln -f ~/labspace/sb-helper/live-files/config ~/.config/terminator/config
+  ln -f ~/labspace/sb-helper/live-files/keybindings.json ~/.config/Code/User/keybindings.json
+  ln -f ~/labspace/sb-helper/live-files/projects.json ~/.config/Code/User/globalStorage/alefragnani.project-manager/projects.json
+  ln -f ~/labspace/sb-helper/live-files/settings.json ~/.config/Code/User/settings.json
+}
+
 function status () {
   echo
   echo "Super Bash Helper is ready to help you!"
@@ -49,7 +63,7 @@ function disabletouch () {
 
 function bitbucketsshkeygen () {
   echo
-  echo '>>  Generate new Bitbucket SSH Key  <<'
+  echo '>>  SB --> Creating a new Bitbucket SSH Key  <<'
   echo
   ssh-keygen
   echo
