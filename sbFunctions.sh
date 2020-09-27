@@ -12,12 +12,14 @@
 #-----------------------------------------------------#
 
 function TEMPLATEMSG(){
+  sleep 1
   echo
   echo " >>  SB - $1  <<"
   echo
 }
 
 function FINALMSG() {
+  sleep 1
   echo
   echo " >>  Finished --> SB!  <<"
   echo
@@ -30,7 +32,9 @@ function FINALMSG() {
 function helloWorld() {
   ACTION="Printing Hello World"
   TEMPLATEMSG "$ACTION"
+
   echo " Hello World!"
+
   FINALMSG
 }
 

@@ -1,59 +1,79 @@
 #!/bin/bash
 # SB Home Menu
 
+source ./sbFunctions.sh
+
 QUESTION(){
-  echo ""
-  echo "Pressione ENTER para voltar ao MENU..."
-  echo ""
-  read BACK
+  echo
+  echo " Press ENTER and go back to SB MENU..."
+  echo
+  read -r BACK
 }
 
 while true 
 do
   clear
-  echo ""
-  echo "  ========================================"
+  echo
+  echo "  ======================================== "
   echo " |            *** SB MENU ***             |"
-  echo "  ========================================"
+  echo "  ======================================== "
   echo " |                                        |"
-  echo " | 1 - Op 01                              |"
-  echo " | 2 - Op 02                              |"
-  echo " | 3 - Reboot [to do]                     |"
-  echo " | 3 - Exit                               |"
+  echo " | 1 - Hello World                        |"
+  echo " | 2 - Option 02                          |"
   echo " |________________________________________|"
-  echo -ne "\n: "
-  read OPERATION
+  echo " |                                        |"
+  echo " | 3 - Reboot                             |"
+  echo " | 4 - Exit                               |"
+  echo " |________________________________________|"
+  echo
+  echo -ne " Choose an option: "
+  read -r OPTION
+  echo
   echo
 
-  case $OPERATION in
-    1)
-      echo
-      echo 'Option number selected 01'
+  case $OPTION in
+    1) while true; do
+      helloWorld
       sleep 1
+
+      QUESTION
+      if [ -z "$BACK" ]; then
+        break
+      fi
+    done
     ;;
 
-    2)
-      echo
-      echo 'Option number selected 02'
+    2) while true; do
+      echo " You chosen option 02"
       sleep 1
+
+      QUESTION
+      if [ -z "$BACK" ]; then
+        break
+      fi
+    done
     ;;
 
-    3) 
-      echo 'To Do'
+    3)
+      echo " Rebooting..."
+      sleep 2
+      shutdown -r now
+      clear
+      break
     ;;
+
     4)
       clear
-      echo
-      echo " Terminando Programa..."
+      echo " Closing SB MENU..."
       sleep 1
       clear
       break
     ;;
 
     *)
-      echo
-      echo " Opção inválida !!!"
+      echo " Invalid option !!!"
       sleep 1
     ;;
+
   esac
 done
