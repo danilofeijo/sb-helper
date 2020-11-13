@@ -25,7 +25,7 @@
   "explorer.confirmDelete": false,
   "files.insertFinalNewline": true,
   "files.eol": "\n",
-  "files.autoSave": "onWindowChange",
+  "files.autoSave": "off",
   "files.exclude": {
     "**/node_modules": false,
     "**/.git": false

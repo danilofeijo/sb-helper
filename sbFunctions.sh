@@ -247,6 +247,7 @@ function installVSCcode() {
   code --install-extension techer.open-in-browser
   code --install-extension esbenp.prettier-vscode
   code --install-extension alefragnani.project-manager
+  code --install-extension nitayneeman.puppeteer-snippets
   # code --install-extension mechatroner.rainbow-csv
   code --install-extension foxundermoon.shell-format
   code --install-extension laurenttreguier.vscode-simple-icons
