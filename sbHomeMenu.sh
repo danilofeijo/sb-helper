@@ -1,7 +1,7 @@
 #!/bin/bash
 # SB Home Menu
 
-source ./sbFunctions.sh
+source ~/labspace/sb-helper/sbFunctions.sh
 
 QUESTION(){
   echo
@@ -19,7 +19,7 @@ do
   echo "  ======================================== "
   echo " |                                        |"
   echo " | 1 - Hello World                        |"
-  echo " | 2 - Option 02                          |"
+  echo " | 2 - Setup                              |"
   echo " |________________________________________|"
   echo " |                                        |"
   echo " | 3 - Reboot                             |"
@@ -44,7 +44,7 @@ do
     ;;
 
     2) while true; do
-      echo " You chosen option 02"
+      echo " You chosen the Setup option"
       sleep 1
 
       QUESTION

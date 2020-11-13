@@ -29,6 +29,29 @@ function FINALMSG() {
 #         Basic Setup                                 #
 #-----------------------------------------------------#
 
+function sbSetupInitial() {
+  ACTION="Initial Setup by SB helper"
+  TEMPLATEMSG "$ACTION"
+
+  setDefaultfolders
+  installSnap
+  installGDebi
+  installGit
+  installVim
+  installCurl
+  installNvm
+  installPostman
+  installVSCcode
+  installFlameshot
+  installPeek
+  installSpotify
+  installZshFull
+  installAWSCli
+  createHardLinks
+
+  FINALMSG
+}
+
 function helloWorld() {
   ACTION="Printing Hello World"
   TEMPLATEMSG "$ACTION"
@@ -191,7 +214,8 @@ function installNvm() {
   bash install_nvm.sh
   source "$HOME/.profile"
   nvm --version             # Verify your nvm version
-  nvm install node          # "node" is an alias for the latest version
+  # nvm install v12
+  # nvm install node          # "node" is an alias for the latest version
   # nvm use v12             # Change to an installed node version
   # nvm alias default v12   # Set a node version as default
 
@@ -323,13 +347,4 @@ function installAWSCli() {
   FINALMSG
   # Reference
   # https://linuxhint.com/install_aws_cli_ubuntu/
-}
-
-function installNotepadqq() {
-  ACTION="Installing Notepad++"
-  TEMPLATEMSG "$ACTION"
-
-  sudo snap install notepadqq
-
-  FINALMSG
 }
