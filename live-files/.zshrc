@@ -89,7 +89,7 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 source $HOME/.bash_aliases
-# source $HOME/labspace/sb-helper/bashFunctions.sh
+# source $HOME/sb-helper/bashFunctions.sh
 
 # User configuration
 

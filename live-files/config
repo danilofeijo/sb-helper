@@ -3,14 +3,23 @@
 [keybindings]
 [layouts]
   [[default]]
-    [[[child1]]]
+    [[[child0]]]
+      fullscreen = False
+      last_active_term = 4f9945a0-927e-480c-96c6-21c5b3bd723f
+      last_active_window = True
+      maximised = False
+      order = 0
+      parent = ""
+      position = 3000:0
+      size = 960, 900
+      type = Window
+    [[[terminal1]]]
       command = zsh; bash
-      parent = window0
+      order = 0
+      parent = child0
       profile = Profile1
       type = Terminal
-    [[[window0]]]
-      parent = ""
-      type = Window
+      uuid = 4f9945a0-927e-480c-96c6-21c5b3bd723f
 [plugins]
 [profiles]
   [[default]]

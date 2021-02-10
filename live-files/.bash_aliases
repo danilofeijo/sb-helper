@@ -3,6 +3,8 @@
 # ~/.bash_aliases
 #
 
+source ~/sb-helper/sbFunctions.sh
+
 #######################################################
 #                                                     #
 #         Bash Aliases                                #
@@ -17,6 +19,7 @@ alias sblinuxupdate='linuxUpdate'
 alias upterm='rebootTerminal'
 alias cl='accessAndList'
 alias mkcd='createAndAccess'
+alias gitCleanUpBranches='git branch | grep -v "master" | xargs git branch -d'
 
 # Zsh
 alias zzz='clear && zsh'  # Only if you have Zsh

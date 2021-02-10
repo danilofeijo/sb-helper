@@ -1,7 +1,7 @@
 #!/bin/bash
 # SB Home Menu
 
-source ~/labspace/sb-helper/sbFunctions.sh
+source ~/sb-helper/sbFunctions.sh
 
 QUESTION(){
   echo
@@ -44,7 +44,7 @@ do
     ;;
 
     2) while true; do
-      echo " You chosen the Setup option"
+      sbSetupInitial
       sleep 1
 
       QUESTION

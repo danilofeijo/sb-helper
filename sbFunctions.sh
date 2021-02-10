@@ -33,7 +33,6 @@ function sbSetupInitial() {
   ACTION="Initial Setup by SB helper"
   TEMPLATEMSG "$ACTION"
 
-  setDefaultfolders
   installSnap
   installGDebi
   installGit
@@ -47,6 +46,7 @@ function sbSetupInitial() {
   installSpotify
   installZshFull
   installAWSCli
+  setDefaultfolders
   createHardLinks
 
   FINALMSG
@@ -77,13 +77,14 @@ function createHardLinks() {
   ACTION="Creating default hard links for config files"
   TEMPLATEMSG "$ACTION"
 
-  ln -f ~/labspace/sb-helper/live-files/.bash_aliases ~/.bash_aliases
-  ln -f ~/labspace/sb-helper/live-files/.bashrc ~/.bashrc
-  ln -f ~/labspace/sb-helper/live-files/.zshrc ~/.zshrc
-  ln -f ~/labspace/sb-helper/live-files/config ~/.config/terminator/config
-  ln -f ~/labspace/sb-helper/live-files/keybindings.json ~/.config/Code/User/keybindings.json
-  ln -f ~/labspace/sb-helper/live-files/projects.json ~/.config/Code/User/globalStorage/alefragnani.project-manager/projects.json
-  ln -f ~/labspace/sb-helper/live-files/settings.json ~/.config/Code/User/settings.json
+  ln -f ~/sb-helper/live-files/.bash_aliases ~/.bash_aliases
+  ln -f ~/sb-helper/live-files/.bashrc ~/.bashrc
+  ln -f ~/sb-helper/live-files/.zshrc ~/.zshrc
+  ln -f ~/sb-helper/live-files/keybindings.json ~/.config/Code/User/keybindings.json
+  ln -f ~/sb-helper/live-files/projects.json ~/.config/Code/User/globalStorage/alefragnani.project-manager/projects.json
+  ln -f ~/sb-helper/live-files/settings.json ~/.config/Code/User/settings.json
+  mkdir ~/.config/terminator
+  ln -f ~/sb-helper/live-files/config ~/.config/terminator/config
 
   FINALMSG
 }
@@ -248,7 +249,7 @@ function installVSCcode() {
 
   code --install-extension truman.autocomplate-shell
   code --install-extension aaron-bond.better-comments
-  code --install-extension CoenraadS.bracket-pair-colorizer
+  code --install-extension coenraads.bracket-pair-colorizer-2
   code --install-extension nwhatt.chai-snippets
   code --install-extension naumovs.color-highlight
   code --install-extension flydreame.docblocker
