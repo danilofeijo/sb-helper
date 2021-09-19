@@ -103,5 +103,9 @@
 	{
 		"key": "ctrl+shift+e",
 		"command": "-workbench.view.explorer"
+	},
+	{
+		"key": "ctrl+shift+s",
+		"command": "workbench.action.files.saveFiles"
 	}
 ]
