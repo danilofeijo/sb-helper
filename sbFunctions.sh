@@ -11,7 +11,7 @@
 #         Helpers                                     #
 #-----------------------------------------------------#
 
-function TEMPLATEMSG(){
+function TEMPLATEMSG() {
   sleep 1
   echo
   echo " >>  SB - $1  <<"
@@ -65,8 +65,8 @@ function setDefaultfolders() {
   ACTION="Creating default folders"
   TEMPLATEMSG "$ACTION"
 
-  sudo mkdir ~/labspace   # A place for your studing projects
-  sudo mkdir ~/workspace    # A place for your professional projects
+  sudo mkdir ~/labspace  # A place for your studing projects
+  sudo mkdir ~/workspace # A place for your professional projects
   sudo chmod -R +777 studyspace
   sudo chmod -R +777 workspace
 
@@ -89,7 +89,7 @@ function createHardLinks() {
   FINALMSG
 }
 
-function bitbucketSSHKeyGen () {
+function bitbucketSSHKeyGen() {
   ACTION="Creating a new Bitbucket SSH Key"
   TEMPLATEMSG "$ACTION"
 
@@ -111,7 +111,7 @@ function bitbucketSSHKeyGen () {
   # https://support.atlassian.com/bitbucket-cloud/docs/set-up-an-ssh-key/#SetupanSSHkey-ssh2
 }
 
-function disableTouch () {
+function disableTouch() {
   ACTION="Disabling laptop touchscreen"
   TEMPLATEMSG "$ACTION"
 
@@ -121,7 +121,6 @@ function disableTouch () {
   # Reference
   # http://www.cleuber.com.br/index.php/2016/03/14/como-desabilitar-tela-de-touch-screen-no-linux
 }
-
 
 #-----------------------------------------------------#
 #         Install Programs                            #
@@ -177,7 +176,6 @@ function installCurl() {
   FINALMSG
 }
 
-
 #---- >> Basic << ------------------------------------#
 
 function installZshFull() {
@@ -214,7 +212,7 @@ function installNvm() {
   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
   bash install_nvm.sh
   source "$HOME/.profile"
-  nvm --version             # Verify your nvm version
+  nvm --version # Verify your nvm version
   # nvm install v12
   # nvm install node          # "node" is an alias for the latest version
   # nvm use v12             # Change to an installed node version
@@ -251,6 +249,7 @@ function installVSCcode() {
   code --install-extension aaron-bond.better-comments
   code --install-extension coenraads.bracket-pair-colorizer-2
   code --install-extension nwhatt.chai-snippets
+  code --install-extension streetsidesoftware.code-spell-checker
   code --install-extension naumovs.color-highlight
   code --install-extension flydreame.docblocker
   code --install-extension dracula-theme.theme-dracula
@@ -306,7 +305,6 @@ function installPeek() {
   # Reference
   # https://github.com/phw/peek#ubuntu
 }
-
 
 #---- >> Regular << ----------------------------------#
 
