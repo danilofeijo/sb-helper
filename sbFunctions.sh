@@ -67,7 +67,7 @@ function setDefaultfolders() {
 
   sudo mkdir ~/labspace  # A place for your studing projects
   sudo mkdir ~/workspace # A place for your professional projects
-  sudo chmod -R +777 studyspace
+  sudo chmod -R +777 labspace
   sudo chmod -R +777 workspace
 
   FINALMSG
