@@ -38,6 +38,7 @@ function sbSetupFavorite() {
   installGit
   installVim
   installCurl
+  installTerminator
   installZshFull
   installNvm
   installVSCcode
@@ -205,6 +206,19 @@ function installCurl() {
 }
 
 #---- >> Basic << ------------------------------------#
+
+function installTerminator() {
+  ACTION="Installing Terminator"
+  TEMPLATEMSG "$ACTION"
+
+  sudo add-apt-repository ppa:gnome-terminator
+  sudo apt-get update
+  sudo apt-get install terminator -y
+
+  FINALMSG
+  # Reference
+  # https://dev.to/xeroxism/how-to-install-terminator-a-linux-terminal-emulator-on-steroids-1m3h
+}
 
 function installZshFull() {
   ACTION="Installing Zsh"
