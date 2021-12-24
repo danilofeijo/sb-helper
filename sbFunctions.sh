@@ -26,8 +26,31 @@ function FINALMSG() {
 }
 
 #-----------------------------------------------------#
-#         Basic Setup                                 #
+#         Combo Functions                             #
 #-----------------------------------------------------#
+
+function sbSetupFavorite() {
+  ACTION="Starting my favorite Setup from SB helper"
+  TEMPLATEMSG "$ACTION"
+
+  installSnap
+  installGDebi
+  installGit
+  installVim
+  installCurl
+  installZshFull
+  installNvm
+  installVSCcode
+  installSpotify
+  installFlameshot
+  installPostman
+  installPeek
+  installChromeGnomeShell
+  setDefaultfolders
+  createHardLinks
+
+  FINALMSG
+}
 
 function sbSetupInitial() {
   ACTION="Initial Setup by SB helper"
@@ -46,11 +69,16 @@ function sbSetupInitial() {
   installSpotify
   installZshFull
   installAWSCli
+  installChromeGnomeShell
   setDefaultfolders
   createHardLinks
 
   FINALMSG
 }
+
+#-----------------------------------------------------#
+#         Setup Something                             #
+#-----------------------------------------------------#
 
 function helloWorld() {
   ACTION="Printing Hello World"
@@ -251,40 +279,6 @@ function installVSCcode() {
   ACTION="Installing VSCode extensions"
   TEMPLATEMSG "$ACTION"
 
-  code --install-extension truman.autocomplate-shell
-  code --install-extension aaron-bond.better-comments
-  code --install-extension coenraads.bracket-pair-colorizer-2
-  code --install-extension nwhatt.chai-snippets
-  code --install-extension streetsidesoftware.code-spell-checker
-  code --install-extension naumovs.color-highlight
-  code --install-extension flydreame.docblocker
-  code --install-extension dracula-theme.theme-dracula
-  # code --install-extension editorconfig.editorconfig
-  code --install-extension spoonscen.es6-mocha-snippets
-  code --install-extension dbaeumer.vscode-eslint
-  # code --install-extension amandeepmittal.expressjs
-  code --install-extension codezombiech.gitignore
-  code --install-extension eamodio.gitlens
-  code --install-extension oderwat.indent-rainbow
-  # code --install-extension orta.vscode-jest
-  # code --install-extension firsttris.vscode-jest-runner
-  # code --install-extension andys8.jest-snippets
-  # code --install-extension ms-vsliveshare.vsliveshare
-  code --install-extension yzhang.markdown-all-in-one
-  code --install-extension eg2.vscode-npm-script
-  code --install-extension zhuangtongfa.material-theme
-  # code --install-extension maty.vscode-mocha-sidebar
-  code --install-extension techer.open-in-browser
-  code --install-extension esbenp.prettier-vscode
-  code --install-extension alefragnani.project-manager
-  code --install-extension nitayneeman.puppeteer-snippets
-  # code --install-extension mechatroner.rainbow-csv
-  code --install-extension foxundermoon.shell-format
-  code --install-extension laurenttreguier.vscode-simple-icons
-  # code --install-extension stevejpurves.cucumber
-  # code --install-extension redhat.vscode-yaml
-  code --install-extension gruntfuggly.todo-tree
-
   FINALMSG
   # Reference
   # https://code.visualstudio.com/docs/setup/linux
@@ -312,6 +306,17 @@ function installPeek() {
   # https://github.com/phw/peek#ubuntu
 }
 
+function installChromeGnomeShell() {
+  ACTION="Installing chrome-gnome-shell package"
+  TEMPLATEMSG "$ACTION"
+
+  sudo apt-get install chrome-gnome-shell
+
+  FINALMSG
+  # Reference
+  # https://github.com/wbolster/nothing-to-say
+  # Package needed to enable above gnome extension
+}
 #---- >> Regular << ----------------------------------#
 
 function installSpotify() {
