@@ -47,8 +47,6 @@
     "activityBarBadge.background": "#FF0000"
   },
   // Extensions Settings
-  "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)",
-  
   "breadcrumbs.enabled": true,
   "diffEditor.ignoreTrimWhitespace": false,
   "docBlocker.Author": "danilofeijo",
@@ -85,6 +83,16 @@
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)",
+  "todo-tree.general.tags": [
+    "BUG",
+    "HACK",
+    "FIXME",
+    "TODO",
+    "XXX",
+    "[ ]",
+    "[x]"
+  ],
   "cSpell.allowCompoundWords": true,
   "cSpell.language": "en,pt,pt_BR",
   "cSpell.logLevel": "Information",
@@ -110,14 +118,5 @@
     "usuario",
     "Usuarios",
     "Utdv"
-  ],
-  "todo-tree.general.tags": [
-    "BUG",
-    "HACK",
-    "FIXME",
-    "TODO",
-    "XXX",
-    "[ ]",
-    "[x]"
   ]
 }
