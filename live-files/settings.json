@@ -42,7 +42,7 @@
   "workbench.sideBar.location": "left",
   "workbench.activityBar.visible": true,
   "workbench.colorTheme": "Dracula",
-  "workbench.iconTheme": "simple-icons",
+  "workbench.iconTheme": "material-icon-theme",
   "workbench.colorCustomizations": {
     "activityBarBadge.background": "#FF0000"
   },
