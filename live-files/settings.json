@@ -12,6 +12,7 @@
   "editor.formatOnType": true,
   "editor.formatOnSave": true,
   "editor.formatOnPaste": false,
+  "editor.inlineSuggest.enabled": true,
   "editor.lineNumbers": "on",
   "editor.lineHeight": 20,
   "editor.selectionHighlight": true,

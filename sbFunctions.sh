@@ -241,7 +241,7 @@ function installZshFull() {
   git clone https://github.com/lukechilds/zsh-better-npm-completion ~/.oh-my-zsh/custom/plugins/zsh-better-npm-completion
 
   # Installing powerlevel10k ZSH Theme
-  ACTION="Installing zsh-better-npm-completion"
+  ACTION="Installing powerlevel10k ZSH Theme"
   TEMPLATEMSG "$ACTION"
 
   git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
