@@ -330,6 +330,9 @@ function installChromeGnomeShell() {
   # Reference
   # https://github.com/wbolster/nothing-to-say
   # Package needed to enable above gnome extension
+  #
+  # Detailed instructions about how to install this extension
+  # https://linuxconfig.org/how-to-install-gnome-shell-extensions-on-ubuntu-20-04-focal-fossa-linux-desktop
 }
 #---- >> Regular << ----------------------------------#
 
