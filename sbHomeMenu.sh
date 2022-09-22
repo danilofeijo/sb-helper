@@ -44,7 +44,7 @@ do
     ;;
 
     2) while true; do
-      sbSetupInitial
+      sbSetupFavorite
       sleep 1
 
       QUESTION
