@@ -53,29 +53,6 @@ function sbSetupFavorite() {
   FINALMSG
 }
 
-function sbSetupInitial() {
-  ACTION="Initial Setup by SB helper"
-  TEMPLATEMSG "$ACTION"
-
-  installSnap
-  installGDebi
-  installGit
-  installVim
-  installCurl
-  installNvm
-  installPostman
-  installVSCcode
-  installFlameshot
-  installPeek
-  installSpotify
-  installZshFull
-  installAWSCli
-  installChromeGnomeShell
-  setDefaultfolders
-  createHardLinks
-
-  FINALMSG
-}
 
 #-----------------------------------------------------#
 #         Setup Something                             #
